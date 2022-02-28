@@ -16,7 +16,7 @@ class PlantModel {
 
 List<PlantModel> plants = [
   PlantModel(
-    path: "",
+    path: "assets/plant_1.png",
     category: "Indoor",
     title: "Cactus Lily",
     description:
@@ -24,7 +24,7 @@ List<PlantModel> plants = [
     price: 30.00,
   ),
   PlantModel(
-    path: "",
+    path: "assets/plant_3.png",
     category: "Outdoor",
     title: "Bonzai Dragor",
     description:
@@ -32,9 +32,9 @@ List<PlantModel> plants = [
     price: 75.00,
   ),
   PlantModel(
-    path: "",
+    path: "assets/plant_2.png",
     category: "Montsera",
-    title: "Montsera Lily",
+    title: "Montsera Lily Oriental",
     description:
         "An Align widget usually takes widget to extreme positions. So for example, if we enter top-right, we need to add extra padding to keep it neat and tidy. A Positioned widget combines these two things and lets us keep one Positioned widget instead of an Align and a Padding. We will see how in a while.",
     price: 55.00,
@@ -43,7 +43,7 @@ List<PlantModel> plants = [
 
 List<PlantModel> populars = [
   PlantModel(
-    path: "assets/indoor2.png",
+    path: "assets/plant_6.png",
     category: "Montsera",
     title: "Montsera Lily",
     description:
@@ -51,7 +51,7 @@ List<PlantModel> populars = [
     price: 55.00,
   ),
   PlantModel(
-    path: "assets/indoor.png",
+    path: "assets/plant_8.png",
     category: "Outdoor",
     title: "Bonzai Dragor",
     description:
@@ -59,7 +59,7 @@ List<PlantModel> populars = [
     price: 75.00,
   ),
   PlantModel(
-    path: "assets/indoor.png",
+    path: "assets/plant_5.png",
     category: "Indoor",
     title: "Cactus Lily",
     description:

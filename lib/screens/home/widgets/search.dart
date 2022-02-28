@@ -15,7 +15,7 @@ class Search extends StatelessWidget {
         children: [
           Container(
             width: 280.0,
-            height: 60.0,
+            height: 55.0,
             padding: const EdgeInsets.only(left: 15.0),
             decoration: BoxDecoration(
               color: Colors.white,
@@ -32,7 +32,7 @@ class Search extends StatelessWidget {
           ),
           Container(
             width: 60.0,
-            height: 60.0,
+            height: 55.0,
             decoration: BoxDecoration(
               color: Colors.black,
               borderRadius: BorderRadius.circular(15.0),

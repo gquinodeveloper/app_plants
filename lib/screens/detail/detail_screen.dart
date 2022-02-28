@@ -29,12 +29,16 @@ class DetailScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Header(),
-                ContentTitle(title: "About"),
+                Header(plantModel: plantModel),
+                const ContentTitle(
+                  title: "About",
+                  wHorizontal: 20.0,
+                ),
                 Expanded(
                   child: SingleChildScrollView(
-                    child: Description(description: plantModel.description)
-                    ,
+                    child: Description(
+                      description: plantModel.description,
+                    ),
                   ),
                 ),
               ],

@@ -17,11 +17,26 @@ class Plants extends StatelessWidget {
         itemBuilder: (context, index) {
           return GestureDetector(
             onTap: () {
-              Navigator.push(
+              /*  Navigator.push(
                 context,
                 MaterialPageRoute(
                   builder: (BuildContext context) => DetailScreen(
                     plantModel: plants[index],
+                  ),
+                ),
+              ); */
+              Navigator.push(
+                context,
+                PageRouteBuilder(
+                  pageBuilder: (c, a1, a2) => DetailScreen(
+                    plantModel: plants[index],
+                  ),
+                  transitionsBuilder: (c, anim, a2, child) => FadeTransition(
+                    opacity: anim,
+                    child: child,
+                  ),
+                  transitionDuration: const Duration(
+                    milliseconds: 1200,
                   ),
                 ),
               );
@@ -39,12 +54,30 @@ class Plants extends StatelessWidget {
                 children: [
                   Container(
                     height: 170.0,
+                    padding: const EdgeInsets.all(10.0),
                     decoration: BoxDecoration(
                       color: AppTheme.kDark,
                       borderRadius: BorderRadius.circular(15.0),
                     ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(
+                          children: [],
+                        ),
+                        Hero(
+                          tag: "key_${plants[index].path}",
+                          child: Image.asset(
+                            plants[index].path,
+                            width: 150.0,
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
-                  SizedBox(height: 10.0),
+                  const SizedBox(height: 10.0),
                   Text(
                     plants[index].category,
                     style: const TextStyle(
@@ -54,6 +87,8 @@ class Plants extends StatelessWidget {
                   ),
                   Text(
                     plants[index].title,
+                    overflow: TextOverflow.ellipsis,
+                    maxLines: 1,
                     style: const TextStyle(
                       fontSize: 18.0,
                       color: AppTheme.kDark,
@@ -64,7 +99,7 @@ class Plants extends StatelessWidget {
                     onTap: () {
                       print(plants[index].title);
                     },
-                    contentPadding: EdgeInsets.all(0.0),
+                    contentPadding: const EdgeInsets.all(0.0),
                     title: const Text(
                       "Price",
                       style: TextStyle(
