@@ -19,7 +19,7 @@ class LoginForm extends StatelessWidget {
           vertical: 30.0,
         ),
         decoration: const BoxDecoration(
-          color: Colors.white,
+          color: AppTheme.kBackground,
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(50.0),
             topRight: Radius.circular(50.0),

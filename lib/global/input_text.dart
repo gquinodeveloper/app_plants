@@ -19,7 +19,7 @@ class InpuText extends StatelessWidget {
       ),
       decoration: InputDecoration(
         filled: true,
-        //fillColor: AppTheme.kGreen,
+        fillColor: Colors.white,
         //border: OutlineInputBorder(),
         focusedBorder: OutlineInputBorder(
           borderSide: const BorderSide(

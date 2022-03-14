@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:g58_appdesign/screens/contact/widgets/contact_maps.dart';
 import 'package:g58_appdesign/screens/detail/detail_screen.dart';
 import 'package:g58_appdesign/screens/home/home_screen.dart';
 import 'package:g58_appdesign/screens/splash/splash_screen.dart';
@@ -18,9 +19,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const SplashScreen(),
+      //home: const SplashScreen(),
       //home: const HomeScreen(),
       //home: const DetailScreen(),
+      home: ContactMaps(),
     );
   }
 }

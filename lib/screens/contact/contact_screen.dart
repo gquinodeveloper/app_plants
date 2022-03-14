@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:g58_appdesign/models/user_model.dart';
 import 'package:g58_appdesign/providers/user_provider.dart';
+import 'package:g58_appdesign/screens/contact/widgets/contact_maps.dart';
 import 'package:g58_appdesign/theme/app_theme.dart';
 
 class ContactScreen extends StatefulWidget {
@@ -56,6 +57,21 @@ class _ContactScreenState extends State<ContactScreen> {
         itemCount: users.length,
         itemBuilder: (context, index) {
           return ListTile(
+            onTap: () {
+              Navigator.push(
+                context,
+                PageRouteBuilder(
+                  pageBuilder: (c, a1, a2) => ContactMaps(),
+                  transitionsBuilder: (c, anim, a2, child) => FadeTransition(
+                    opacity: anim,
+                    child: child,
+                  ),
+                  transitionDuration: const Duration(
+                    milliseconds: 800,
+                  ),
+                ),
+              );
+            },
             leading: CircleAvatar(
               backgroundImage: NetworkImage("${users[index].avatar}"),
             ),
